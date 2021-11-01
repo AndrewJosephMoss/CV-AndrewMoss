@@ -26,12 +26,7 @@ DashboardItemSmall.propTypes = {
 };
 
 DashboardItemSmall.defaultProps = {
-  text: "Lorem ipsum dolor sit amet, consectetur\
-    adipiscing elit, sed do eiusmod tempor\
-    incididunt ut labore et dolore magna\
-    aliqua. Rhoncus dolor purus non enim\
-    praesent elementum facilisis leo vel.\
-    Risus at ultrices mi tempus imperdiet.",
+  text: "Some default text",
 };
 
 export default DashboardItemSmall;

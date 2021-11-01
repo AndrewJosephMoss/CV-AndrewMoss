@@ -2,17 +2,11 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Toolbar from "@mui/material/Toolbar";
-import { useTheme } from "@mui/material/styles";
-import { css } from "@emotion/react";
 
 import DashboardItemSmall from "./DashboardItemSmall";
 import DashboardItemTiny from "./DashboardItemTiny";
 
 const Dashboard = ({ title }) => {
-  const theme = useTheme();
-
-  const styles = {};
-
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Toolbar />
@@ -29,7 +23,14 @@ const Dashboard = ({ title }) => {
         <DashboardItemTiny />
         <DashboardItemTiny />
 
-        <DashboardItemSmall />
+        <DashboardItemSmall
+          text="Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna
+          aliqua. Rhoncus dolor purus non enim
+          praesent elementum facilisis leo vel.
+          Risus at ultrices mi tempus imperdiet."
+        />
         <DashboardItemSmall
           text="Semper risus in hendrerit gravida rutrum
         quisque non tellus. Convallis convallis
@@ -52,7 +53,14 @@ const Dashboard = ({ title }) => {
           ullamcorper morbi tincidunt. Lorem donec
           massa sapien faucibus et molestie ac."
         />
-        <DashboardItemSmall />
+        <DashboardItemSmall
+          text="Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna
+        aliqua. Rhoncus dolor purus non enim
+        praesent elementum facilisis leo vel.
+        Risus at ultrices mi tempus imperdiet."
+        />
         <DashboardItemSmall
           text="Semper risus in hendrerit gravida rutrum
         quisque non tellus. Convallis convallis
