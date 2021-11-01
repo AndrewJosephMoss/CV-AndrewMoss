@@ -7,9 +7,9 @@ import { useTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
 import { css } from "@emotion/react";
 
-import { LayoutContext } from "../context/LayoutContext";
-import Cherry from "../Cherry.svg";
-import navigationRoutes from "../routes/sidebarNavigationRoutes";
+import { LayoutContext } from "../../context/LayoutContext";
+import Cherry from "../../Cherry.svg";
+import navigationRoutes from "../../routes/sidebarNavigationRoutes";
 import NavigationSidebarItem from "./NavigationSidebarItem";
 
 const NavigationSidebar = () => {
@@ -46,7 +46,7 @@ const NavigationSidebar = () => {
       & .MuiDrawer-paper {
         width: ${layoutState.sidebarWidth}px;
         background-color: ${theme.palette
-          .translucent2};
+          .transparent.translucent95};
       }
     `,
   };

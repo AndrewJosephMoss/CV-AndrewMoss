@@ -3,6 +3,7 @@ import {
   Subject,
 } from "@mui/icons-material";
 
+import DashboardLayout from "../components/layouts/Dashboard";
 import Dummy from "../components/Dummy";
 
 const routes = [
@@ -10,7 +11,9 @@ const routes = [
     label: "Dashboard",
     path: "/",
     icon: Dashboard,
-    component: <Dummy title="Dashboard" />,
+    component: (
+      <DashboardLayout title="Dashboard" />
+    ),
   },
   {
     label: "Dummy1",

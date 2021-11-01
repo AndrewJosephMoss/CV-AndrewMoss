@@ -11,8 +11,8 @@ import { useTheme } from "@mui/material/styles";
 import { css } from "@emotion/react";
 import { useScrollTrigger } from "@mui/material";
 
-import { LayoutContext } from "../context/LayoutContext";
-import Cherry from "../Cherry.svg";
+import { LayoutContext } from "../../context/LayoutContext";
+import Cherry from "../../Cherry.svg";
 
 const AppTopBar = () => {
   const { layoutState, dispatch } = useContext(
@@ -34,7 +34,7 @@ const AppTopBar = () => {
   const styles = {
     appTopBar: css`
       background-color: ${isScrolled
-        ? theme.palette.translucent
+        ? theme.palette.transparent.translucent6
         : `transparent`};
       backdrop-filter: saturate(150%)
         blur(${theme.spacing(1)});
@@ -68,8 +68,9 @@ const AppTopBar = () => {
         }}
       >
         <Toolbar sx={{ ...styles.toolbar }}>
-          {!layoutState.sidebarIsPermanent && (
-            <React.Fragment>
+          {/* {!layoutState.sidebarIsPermanent && ( */}
+          <React.Fragment>
+            {!layoutState.sidebarIsPermanent && (
               <img
                 style={{
                   height: "64px",
@@ -77,18 +78,20 @@ const AppTopBar = () => {
                 src={Cherry}
                 alt="Cherry Logo"
               />
-              <span style={{ flex: "1" }} />
-              <Typography
-                sx={{
-                  ...styles.title,
-                }}
-                variant="h4"
-                noWrap
-                component="div"
-              >
-                AppBar
-              </Typography>
-              <span style={{ flex: "1" }} />
+            )}
+            <span style={{ flex: "1" }} />
+            <Typography
+              sx={{
+                ...styles.title,
+              }}
+              variant="h4"
+              noWrap
+              component="div"
+            >
+              AppBar
+            </Typography>
+            <span style={{ flex: "1" }} />
+            {!layoutState.sidebarIsPermanent && (
               <IconButton onClick={toggleSidebar}>
                 {layoutState.sidebarIsOpen ? (
                   <MenuIcon />
@@ -96,11 +99,12 @@ const AppTopBar = () => {
                   <MenuOpen />
                 )}
               </IconButton>
-              <IconButton>
-                <Settings />
-              </IconButton>
-            </React.Fragment>
-          )}
+            )}
+            <IconButton>
+              <Settings />
+            </IconButton>
+          </React.Fragment>
+          {/* )} */}
         </Toolbar>
       </AppBar>
     </>

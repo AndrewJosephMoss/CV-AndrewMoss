@@ -11,8 +11,8 @@ import {
 
 import sidebarNavigationRoutes from "./routes/sidebarNavigationRoutes";
 import { LayoutProvider } from "./context/LayoutContext.js";
-import AppTopBar from "./components/AppTopBar.js";
-import NavigationSidebar from "./components/NavigationSidebar.js";
+import AppTopBar from "./components/appbar-sidebar/AppTopBar.js";
+import NavigationSidebar from "./components/appbar-sidebar/NavigationSidebar.js";
 import customTheme from "./theme/theme.js";
 
 const sidebarWidth = 240;
@@ -25,8 +25,8 @@ export default function PermanentDrawerLeft() {
           sx={{
             display: "flex",
             backgroundColor:
-              customTheme.palette
-                .backgroundColour,
+              customTheme.palette.background
+                .default,
           }}
         >
           <LayoutProvider>

@@ -8,8 +8,10 @@ const Dummy = ({ title }) => {
     <Box
       component="main"
       sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
         flexGrow: 1,
-        bgcolor: "background.default",
         p: 3,
       }}
     >
